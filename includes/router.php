@@ -13,14 +13,25 @@ function normalizeUri(string $uri): string
     return $uri === INDEX_URI ? INDEX_ROUTE : $uri;
 }
 
+function notFound(): void
+{
+    http_response_code(404);
+    echo "404 Not Found";
+    exit;
+}
 
 
 function dispatch(string $uri, string $method): void
 {
     //  1.) normalize the URI: GET /guestbook -> routes/guestbook_get.php
     $uri = normalizeUri($uri);
-
+    $method = strtoupper($method);
     // 2.) if !GET or POST - return 404
+    if (!in_array($method, ALLOWED_METHODS)) {
+        notFound();
+    }
+
+
     // 3.) file path - PHP file path
     // 4.) if file exists, if not 404
     // 5.) if file exists, handle the route by including the PHP file
