@@ -7,3 +7,7 @@ const INCLUDES_DIR = __DIR__ . '/../includes/';
 session_start();
 
 require_once INCLUDES_DIR . '/router.php';
+
+
+// handle request
+dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);

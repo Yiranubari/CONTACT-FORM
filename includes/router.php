@@ -14,6 +14,10 @@ function normalizeUri(string $uri): string
 function dispatch(string $uri, string $method): void
 {
     //  1.) normalize the URI: GET /guestbook -> routes/guestbook_get.php
+    $uri = normalizeUri($uri);
+    var_dump($uri);
+    die;
+
 
     // 2.) if !GET or POST - return 404
     // 3.) file path - PHP file path
