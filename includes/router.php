@@ -35,9 +35,8 @@ function dispatch(string $uri, string $method): void
     if (!in_array($method, ALLOWED_METHODS)) {
         notFound();
     }
-
-
     // 3.) file path - PHP file path
+    var_dump(getFilePath($uri, $method));
     // 4.) if file exists, if not 404
     // 5.) if file exists, handle the route by including the PHP file
 }
