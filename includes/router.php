@@ -13,6 +13,11 @@ function normalizeUri(string $uri): string
     return $uri === INDEX_URI ? INDEX_ROUTE : $uri;
 }
 
+function getFilePath(string $uri, string $method): string
+{
+    return ROUTES_DIR . '/' . normalizeUri($uri) . '_' . strtolower($method) . '.php';
+}
+
 function notFound(): void
 {
     http_response_code(404);

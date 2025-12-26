@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 const INCLUDES_DIR = __DIR__ . '/../includes/';
+const ROUTES_DIR = __DIR__ . '/../routes';
 
 session_start();
 
