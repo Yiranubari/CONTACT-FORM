@@ -28,10 +28,10 @@ function notFound(): void
 
 function dispatch(string $uri, string $method): void
 {
-    //  1.) normalize the URI: GET /guestbook -> routes/guestbook_get.php
+    //  1.)/ normalize the URI: GET /guestbook -> routes/guestbook_get.php
     $uri = normalizeUri($uri);
     $method = strtoupper($method);
-    // 2.) if !GET or POST - return 404
+    // 2.)/ if !GET or POST - return 404
     if (!in_array($method, ALLOWED_METHODS)) {
         notFound();
     }
