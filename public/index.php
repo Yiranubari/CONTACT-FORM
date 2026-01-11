@@ -9,6 +9,7 @@ const TEMPLATES_DIR = __DIR__ . '/../templates/';
 session_start();
 
 require_once INCLUDES_DIR . '/router.php';
+require_once INCLUDES_DIR . '/view.php';
 
 
 // handle request
