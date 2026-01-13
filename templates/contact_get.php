@@ -7,6 +7,6 @@
         <input type="email" id="email" name="email" />
         <label>Message</label>
         <textarea rows="4" id="message" name="message"></textarea>
-
+        <button type="submit">Submit</button>
     </form>
 </section>
