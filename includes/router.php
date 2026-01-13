@@ -25,6 +25,14 @@ function notFound(): void
     exit;
 }
 
+function badRequest(): void
+{
+    http_response_code(400);
+    echo "400 Bad Request";
+    exit;
+}
+
+
 
 function dispatch(string $uri, string $method): void
 {
