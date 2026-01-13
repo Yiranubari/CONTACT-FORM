@@ -25,10 +25,10 @@ function notFound(): void
     exit;
 }
 
-function badRequest(): void
+function badRequest(string $message = "400 Bad Request"): void
 {
     http_response_code(400);
-    echo "400 Bad Request";
+    echo $message;
     exit;
 }
 
