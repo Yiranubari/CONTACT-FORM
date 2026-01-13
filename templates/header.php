@@ -182,7 +182,7 @@
             <h1>Yiranubari</h1>
             <nav>
                 <a href="index.php" class="active">Home</a>
-                <a href="about.php">About</a>
+                <a href="contact_get.php">Contact</a>
                 <a href="note.php">Note</a>
                 <a href="guestbook.php">Guestbook</a>
             </nav>
