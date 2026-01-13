@@ -7,4 +7,5 @@ function renderView(string $template, array $data = []): void
     include TEMPLATES_DIR . '/header.php';
     include TEMPLATES_DIR . '/' . $template . '.php';
     include TEMPLATES_DIR . '/footer.php';
+    include TEMPLATES_DIR . '/contact_get.php';
 }
