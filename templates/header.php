@@ -103,7 +103,7 @@
         main {
             flex: 1;
             /* Pushes footer down */
-            padding: 3rem 0;
+            padding: 2rem 0;
         }
 
         .card {
@@ -113,13 +113,12 @@
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
 
+
             /* Layout Fixes */
             width: 100%;
-            /* 1. Fill the available space... */
             max-width: 700px;
-            /* 2. ...but stop at 700px (Same as Contact Form) */
-            margin: 3rem auto;
-            /* 3. Center it horizontally (auto margins) */
+            margin: 0 auto;
+
         }
 
         h2 {
@@ -174,20 +173,30 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
+
+
         }
 
         /* Container styling to match the 'Hello' card */
         .contact-card {
             background-color: #ffffff;
+            width: 100%;
             max-width: 700px;
-            /* Keeps it readable */
-            margin: 40px auto;
-            /* Centers the card and adds vertical spacing */
+
+            /* Spacing between Hello Card and Form */
+            margin-top: 2rem;
+            /* Reduced from 40px */
+            margin-bottom: 2rem;
+            /* Reduced from 40px */
+            margin-left: auto;
+            margin-right: auto;
+
             padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             font-family: system-ui, -apple-system, sans-serif;
             color: #1f2937;
+            box-sizing: border-box;
         }
 
         .contact-card h2 {
