@@ -11,3 +11,5 @@ if (empty($name) || empty($message) || empty($email)) {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     badRequest();
 }
+
+var_dump($email, $name, $message);
