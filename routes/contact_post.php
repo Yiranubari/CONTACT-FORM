@@ -15,3 +15,4 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 connectDb();
 
 var_dump($email, $name, $message);
+die;
