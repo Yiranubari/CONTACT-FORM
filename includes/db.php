@@ -14,4 +14,5 @@ function loadSchema(PDO $pdo, string $schemaFile): void
         die("Could not read schema file: $schemaFile");
     }
     $pdo->exec($sql);
+    echo "Schema loaded successfully.\n";
 }
