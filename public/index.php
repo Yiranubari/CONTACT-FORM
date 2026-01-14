@@ -5,6 +5,7 @@ declare(strict_types=1);
 const INCLUDES_DIR = __DIR__ . '/../includes/';
 const ROUTES_DIR = __DIR__ . '/../routes';
 const TEMPLATES_DIR = __DIR__ . '/../templates/';
+const DB_DIR = __DIR__ . '/../templates';
 
 session_start();
 
