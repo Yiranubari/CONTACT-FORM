@@ -7,4 +7,10 @@ function connectDb(): PDO
     return $pdo;
 }
 
-function loadSchema(PDO $pdo, string $schemaFile): void {}
+function loadSchema(PDO $pdo, string $schemaFile): void
+{
+    $sql = file_get_contents($schemaFile);
+    if (false === $sql) {
+        die("Could not read schema file: $schemaFile");
+    }
+}
