@@ -16,3 +16,8 @@ function loadSchema(PDO $pdo, string $schemaFile): void
     $pdo->exec($sql);
     echo "Schema loaded successfully.\n";
 }
+
+function insertMessage(PDO $pdo, string $name, string $email, string $message): bool
+{
+    $sql = "INSERT INTO messages (name, email, message) VALUES()";
+}
