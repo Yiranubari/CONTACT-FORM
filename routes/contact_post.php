@@ -27,5 +27,7 @@ if ($inserted) {
     exit;
 }
 
+http_response_code(500);
+
 var_dump($email, $name, $message);
 die;
