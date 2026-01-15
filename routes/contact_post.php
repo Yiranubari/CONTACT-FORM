@@ -14,7 +14,12 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 
 
-insertMessage(connectDb(), name: $name, email: $email, message: $message);
+insertMessage(
+    connectDb(),
+    name: $name,
+    email: $email,
+    message: $message
+);
 
 var_dump($email, $name, $message);
 die;
