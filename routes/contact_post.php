@@ -14,7 +14,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 
 
-insertMessage(
+$inserted = insertMessage(
     connectDb(),
     name: $name,
     email: $email,
