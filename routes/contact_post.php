@@ -26,4 +26,4 @@ if ($inserted) {
     addFlashMessage('success', 'Your message has been sent successfully!');
 }
 
-serverError("Could not save your message. Please try again later.");
+addFlashMessage('error', "Could not save your message. Please try again later.");
