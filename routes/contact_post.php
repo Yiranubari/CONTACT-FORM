@@ -27,3 +27,5 @@ if ($inserted) {
 }
 
 addFlashMessage('error', "Could not save your message. Please try again later.");
+
+header("Location: /guestbook");
