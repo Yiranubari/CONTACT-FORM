@@ -12,3 +12,4 @@ require_once INCLUDES_DIR . '/view.php';
 require_once INCLUDES_DIR . '/db.php';
 
 error_reporting(E_ALL);
+set_exception_handler();
