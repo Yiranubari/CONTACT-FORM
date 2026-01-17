@@ -2,18 +2,27 @@
 $messages = $data['messages'];
 ?>
 
-<section>
-    <h2>
-        Guest Messages
-    </h2>
+<section class="guestbook-card">
+    <h2>Guest Messages</h2>
+
     <?php if (empty($messages)): ?>
-        <p>No messages yet. Be the first to leave a message!</p>
+        <p class="empty-state">No messages yet. Be the first to leave a message!</p>
     <?php else: ?>
-        <?php foreach ($messages as $message): ?>
-            <h3><?= htmlspecialchars($message['name']) ?></h3>
-            <p><?= htmlspecialchars($message['email']) ?></p>
-            <p><?= nl2br(htmlspecialchars($message['message'])) ?></p>
-            <small>Posted on: <?= htmlspecialchars($message['created_at']) ?> </small>
-        <?php endforeach; ?>
+        <div class="messages-list">
+            <?php foreach ($messages as $message): ?>
+                <div class="message-item">
+                    <div class="message-header">
+                        <h3><?= htmlspecialchars($message['name']) ?></h3>
+                        <span class="date"><?= htmlspecialchars($message['created_at']) ?></span>
+                    </div>
+
+                    <p class="email"><?= htmlspecialchars($message['email']) ?></p>
+
+                    <div class="message-body">
+                        <?= nl2br(htmlspecialchars($message['message'])) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
     <?php endif; ?>
 </section>
