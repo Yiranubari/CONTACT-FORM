@@ -2,5 +2,5 @@
 $messages = getMessages(connectDb());
 renderView(
     template: 'guestbook_get',
-    data: ['messages' => $entries]
+    data: ['messages' => $messages]
 );
