@@ -11,7 +11,9 @@ var_dump($messages);
     <p>No messages yet. Be the first to leave a message!</p>
     <?php else: ?>
     <?php foreach ($messages as $message): ?>
-
+    <h3><?= htmlspecialchars($message['name']) ?></h3>
+    <p><?= htmlspecialchars($message['email']) ?></p>
+    <p><?= nl2br(htmlspecialchars($message['message'])) ?></p>
     <?php endforeach; ?>
     <?php endif; ?>
 </section>
