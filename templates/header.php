@@ -286,7 +286,7 @@
                 <a href="index.php" class="active">Home</a>
                 <a href="contact_get.php">Contact</a>
                 <a href="note.php">Note</a>
-                <a href="guestbook.php">Guestbook</a>
+                <a href="/guestbook">Guestbook</a>
             </nav>
         </div>
 
