@@ -10,3 +10,12 @@ function exceptionHandler(Throwable $exception)
 
     serverError("An unexpected error occurred. Please try again later.");
 }
+
+function errorHandler(int $errno, string $errstr, string $errfile, int $errline): bool
+{
+    $message = "Error [$errno]: $errstr in file $errfile on line $errline";
+    error_log($message);
+
+    serverError("An unexpected error occurred. Please try again later.");
+    return true; // Prevent the PHP internal error handler from running
+}
