@@ -1,6 +1,5 @@
 <?php
 $messages = $data['messages'];
-var_dump($messages);
 ?>
 
 <section>
