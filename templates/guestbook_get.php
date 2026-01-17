@@ -1,0 +1,2 @@
+<?php
+$entries = $data['messages'];
