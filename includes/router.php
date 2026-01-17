@@ -39,6 +39,10 @@ function serverError(string $message = "500 Internal Server Error"): void
     exit;
 }
 
+function redirect(string $uri): void
+{
+    header("Location: $uri");
+}
 
 function dispatch(string $uri, string $method): void
 {
