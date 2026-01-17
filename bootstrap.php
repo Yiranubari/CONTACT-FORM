@@ -5,6 +5,7 @@ require_once __DIR__ . '/error_handling.php';
 
 error_reporting(E_ALL);
 set_exception_handler('exceptionHandler');
+set_error_handler('errorHandler');
 
 
 
