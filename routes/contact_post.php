@@ -23,8 +23,7 @@ $inserted = insertMessage(
 
 if ($inserted) {
     $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-    echo "Thank you, $safeName, for your message!";
-    exit;
+    addFlashMessage('success', 'Your message has been sent successfully!');
 }
 
 serverError("Could not save your message. Please try again later.");
