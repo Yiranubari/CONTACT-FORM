@@ -6,7 +6,8 @@ const CSRF_TOKEN_LENGTH = 32;
 const CSRF_TOKEN_LIFETIME = 60 * 30;
 function generateCsrfToken(): string
 {
-    return 'fixed_csrf_token_for_testing';
+    $token = random_bytes(CSRF_TOKEN_LENGTH);
+    return $token;
 }
 
 function validateCsrfToken(?string $token): bool
