@@ -32,8 +32,9 @@ function getCurrentCsrfToken(): string
     // return the existing token
     // 2. Otherwise, generate a new token 
     // return it
+    [$token, $time] = getCsrfTokenAndTime();
     if (
-        !isset($_SESSION['csrf_token'], $_SESSION['csrf_token_time']) ||
+        !isset($token, $time) ||
         (time() - $_SESSION['csrf_token_time']
             > CSRF_TOKEN_LIFETIME)
     ) {
