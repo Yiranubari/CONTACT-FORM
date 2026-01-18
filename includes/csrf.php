@@ -26,6 +26,11 @@ function setCsrfTokenAndTime(string $token): void
     $_SESSION['csrf_token_time'] = time();
 }
 
+function isTokenExpired(?int $time): bool
+{
+    return $time === null || (time() - $time) > CSRF_TOKEN_LIFETIME;
+}
+
 function getCurrentCsrfToken(): string
 {
     // 1. Check if a token exists and is still valid
