@@ -13,6 +13,14 @@ function generateCsrfToken(): string
     return $token;
 }
 
+function getCsrfTokenAndTime(): array
+{
+    return [
+        $_SESSION['csrf_token'] ?? null,
+        $_SESSION['csrf_token_time'] ?? null
+    ];
+}
+
 function getCurrentCsrfToken(): string
 {
     // 1. Check if a token exists and is still valid
