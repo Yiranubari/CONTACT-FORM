@@ -20,28 +20,36 @@ function getFilePath(string $uri, string $method): string
 
 function notFound(): void
 {
-    http_response_code(404);
+    if (!headers_sent()) {
+        http_response_code(404);
+    }
     echo "404 Not Found";
     exit;
 }
 
 function badRequest(string $message = "400 Bad Request"): void
 {
-    http_response_code(400);
+    if (!headers_sent()) {
+        http_response_code(400);
+    }
     echo $message;
     exit;
 }
 
 function serverError(string $message = "500 Internal Server Error"): void
 {
-    http_response_code(500);
+    if (!headers_sent()) {
+        http_response_code(500);
+    }
     echo $message;
     exit;
 }
 
 function redirect(string $uri): void
 {
-    header("Location: $uri");
+    if (!headers_sent()) {
+        header("Location: $uri");
+    }
 }
 
 function dispatch(string $uri, string $method): void
