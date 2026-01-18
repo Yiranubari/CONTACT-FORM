@@ -1,5 +1,10 @@
 <?php
 
+
+if (!validateCsrfToken($_POST['csrf_token'] ?? null)) {
+    addFlashMessage('error', "Sorry, please try submitting the form again.");
+}
+
 $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
 $message = $_POST['message'] ?? '';
