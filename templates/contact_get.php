@@ -1,7 +1,7 @@
 <section class="contact-card">
     <h2>Leave a Public Note/Question</h2>
     <form method="POST" action="/contact">
-        <input type="hidden" name="csrfToken" value="<?= htmlspecialchars($csrf_token, ENT_QUOTES, 'UTF-8') ?>" />
+        <input type="hidden" name="csrfToken" value="<?= $data['csrfToken'] ?>" />
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required />
