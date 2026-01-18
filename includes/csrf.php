@@ -40,8 +40,7 @@ function getCurrentCsrfToken(): string
     [$token, $time] = getCsrfTokenAndTime();
     if (
         !isset($token, $time) ||
-        (time() - $_SESSION['csrf_token_time']
-            > CSRF_TOKEN_LIFETIME)
+        isTokenExpired($time)
     ) {
         return generateCsrfToken();
     }
