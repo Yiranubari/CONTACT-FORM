@@ -21,6 +21,12 @@ function getCsrfTokenAndTime(): array
     ];
 }
 
+function setCsrfTokenAndTime(string $token): void
+{
+    $_SESSION['csrf_token'] = $token;
+    $_SESSION['csrf_token_time'] = time();
+}
+
 function getCurrentCsrfToken(): string
 {
     // 1. Check if a token exists and is still valid
