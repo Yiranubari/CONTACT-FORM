@@ -13,8 +13,21 @@ function generateCsrfToken(): string
     return $token;
 }
 
-var_dump(generateCsrfToken());
-die;
+function getCurrentCsrfToken(): string
+{
+    // 1. Check if a token exists and is still valid
+    // return the existing token
+    // 2. Otherwise, generate a new token 
+    // return it
+    if (
+        !isset($_SESSION['csrf_token'], $_SESSION['csrf_token_time']) ||
+        (time() - $_SESSION['csrf_token_time']
+            > CSRF_TOKEN_LIFETIME)
+    ) {
+        return generateCsrfToken();
+    }
+    return $_SESSION['csrf_token'];
+}
 
 function validateCsrfToken(?string $token): bool
 {
