@@ -7,8 +7,7 @@ const CSRF_TOKEN_LIFETIME = 60 * 30;
 function generateCsrfToken(): string
 {
     $token = bin2hex(random_bytes(CSRF_TOKEN_LENGTH));
-    $_SESSION['csrf_token'] = $token;
-    $_SESSION['csrf_token_time'] = time();
+    setCsrfTokenAndTime($token);
 
     return $token;
 }
