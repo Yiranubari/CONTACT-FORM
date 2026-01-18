@@ -50,6 +50,7 @@ function redirect(string $uri): void
     if (!headers_sent()) {
         header("Location: $uri");
     }
+    exit;
 }
 
 function dispatch(string $uri, string $method): void
