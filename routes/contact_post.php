@@ -3,6 +3,7 @@
 
 if (!validateCsrfToken($_POST['csrf_token'] ?? null)) {
     addFlashMessage('error', "Sorry, please try submitting the form again.");
+    redirect('/contact');
 }
 
 $name = $_POST['name'] ?? '';
