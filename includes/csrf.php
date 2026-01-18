@@ -10,6 +10,9 @@ function generateCsrfToken(): string
     return $token;
 }
 
+var_dump(generateCsrfToken());
+die;
+
 function validateCsrfToken(?string $token): bool
 {
     return false;
